@@ -9,3 +9,11 @@ func Repeat(c rune, times int) string {
 	}
 	return sb.String()
 }
+
+func RepeatByConcatenation(c rune, times int) string {
+	result := ""
+	for i := 0; i < times; i++ {
+		result += string(c)
+	}
+	return result
+}
