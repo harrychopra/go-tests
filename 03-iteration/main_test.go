@@ -12,6 +12,12 @@ func TestRepeat(t *testing.T) {
 		is.Equal("xxxxxxxxxx", Repeat('x', 10))
 	})
 }
+func TestRepeatByConcatenation(t *testing.T) {
+	is := is.New(t)
+	t.Run("Repeat z 5 times", func(t *testing.T) {
+		is.Equal("zzzzz", RepeatByConcatenation('z', 5))
+	})
+}
 
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < 10000; i++ {
